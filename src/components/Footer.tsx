@@ -22,7 +22,7 @@ export default function Footer() {
             </div>
             <div>
               <p className="font-semibold text-green-100">Support & Email</p>
-              <p className="text-sm text-white/70">info@domainname.com</p>
+              <p className="text-sm text-white/70">Info@domainame.com</p>
             </div>
           </div>
 
