@@ -71,49 +71,70 @@ export default function Investment() {
       </section>
 
       {/* Financial Projections */}
-      <section className="section-padding solar-section-alt">
-        <div className="container mx-auto max-w-4xl">
-          <ScrollReveal>
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-center mb-12">
-              Financial <span className="gradient-text">Projections</span>
-            </h2>
-          </ScrollReveal>
-          <div className="grid md:grid-cols-2 gap-6">
-            <ScrollReveal>
-              <div className="glass-card p-8 text-center hover-scale">
-                <p className="text-muted-foreground text-sm mb-2">2025–26</p>
-                <div className="text-2xl font-heading font-bold gradient-text mb-1">
-                  <AnimatedAmount value={9} />
-                </div>
-                <p className="text-xs text-muted-foreground">EBITDA</p>
-                <div className="text-2xl font-heading font-bold gradient-text mt-4 mb-1">
-                  <AnimatedAmount value={3} />
-                </div>
-                <p className="text-xs text-muted-foreground">PAT</p>
-              </div>
-            </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <div className="glass-card p-8 text-center hover-scale border-2 border-accent/30">
-                <p className="text-muted-foreground text-sm mb-2">2028–29</p>
-                <div className="text-2xl font-heading font-bold gradient-text mb-1">
-                  <AnimatedAmount value={197} />
-                </div>
-                <p className="text-xs text-muted-foreground">EBITDA</p>
-                <div className="text-2xl font-heading font-bold gradient-text mt-4 mb-1">
-                  <AnimatedAmount value={187} />
-                </div>
-                <p className="text-xs text-muted-foreground">PAT</p>
-              </div>
-            </ScrollReveal>
+   <section className="section-padding solar-section-alt">
+  <div className="container mx-auto max-w-6xl">
+    <ScrollReveal>
+      <h2 className="font-heading font-bold text-3xl md:text-4xl text-center mb-12">
+        Financial <span className="gradient-text">Projections</span>
+      </h2>
+    </ScrollReveal>
+
+    {/* 👇 Changed to 3 columns */}
+    <div className="grid md:grid-cols-3 gap-6 items-center">
+      
+      {/* LEFT BOX */}
+      <ScrollReveal>
+        <div className="glass-card p-8 text-center hover-scale">
+          <p className="text-muted-foreground text-sm mb-2">2025–26</p>
+          <div className="text-2xl font-heading font-bold gradient-text mb-1">
+            <AnimatedAmount value={9} />
           </div>
-          <ScrollReveal delay={300}>
-            <p className="text-center text-muted-foreground mt-8 flex items-center justify-center gap-2">
-              <ArrowUpRight className="h-5 w-5 text-accent" />
-              Profitability scales rapidly with capacity expansion
-            </p>
-          </ScrollReveal>
+          <p className="text-xs text-muted-foreground">EBITDA</p>
+          <div className="text-2xl font-heading font-bold gradient-text mt-4 mb-1">
+            <AnimatedAmount value={3} />
+          </div>
+          <p className="text-xs text-muted-foreground">PAT</p>
         </div>
-      </section>
+      </ScrollReveal>
+
+      {/* CENTER IMAGE */}
+      <ScrollReveal delay={100}>
+        <div className="flex justify-center">
+          <img
+            src="/projection.png"   // 👉 your image
+            alt="solar"
+            className=""
+          />
+        </div>
+      </ScrollReveal>
+
+      {/* RIGHT BOX */}
+      <ScrollReveal delay={200}>
+        <div className="glass-card p-8 text-center hover-scale border-2 border-accent/30">
+          <p className="text-muted-foreground text-sm mb-2">2028–29</p>
+          <div className="text-2xl font-heading font-bold gradient-text mb-1">
+            <AnimatedAmount value={197} />
+          </div>
+          <p className="text-xs text-muted-foreground">EBITDA</p>
+          <div className="text-2xl font-heading font-bold gradient-text mt-4 mb-1">
+            <AnimatedAmount value={187} />
+          </div>
+          <p className="text-xs text-muted-foreground">PAT</p>
+        </div>
+      </ScrollReveal>
+
+    </div>
+
+    {/* Bottom Text */}
+    <ScrollReveal delay={300}>
+      <p className="text-center text-muted-foreground mt-8 flex items-center justify-center gap-2">
+        <ArrowUpRight className="h-5 w-5 text-accent" />
+        Profitability scales rapidly with capacity expansion
+      </p>
+    </ScrollReveal>
+
+  </div>
+</section>
 
       {/* Exit Strategy */}
       <section className="section-padding solar-section">

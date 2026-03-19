@@ -8,9 +8,9 @@ import Index from "./pages/Index";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Technology from "./pages/Technology";
-// import Market from "./pages/Market";
-// import Investment from "./pages/Investment";
-// import Contact from "./pages/Contact";
+import Market from "./pages/Market";
+import Investment from "./pages/Investment";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,9 +27,9 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/technology" element={<Technology />} />
-            {/* <Route path="/market" element={<Market />} />
+            <Route path="/market" element={<Market />} />
             <Route path="/investment" element={<Investment />} />
-            <Route path="/contact" element={<Contact />} /> */}
+            <Route path="/contact" element={<Contact />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

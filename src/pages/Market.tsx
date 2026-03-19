@@ -1,6 +1,6 @@
 import ScrollReveal from "@/components/ScrollReveal";
 import ThemeMarquee from "@/components/ThemeMarquee";
-import { Globe, Target, TrendingUp, MapPin, ArrowRight } from "lucide-react";
+import { Globe, Target, TrendingUp, MapPin } from "lucide-react";
 
 export default function Market() {
   return (
@@ -45,8 +45,8 @@ export default function Market() {
       </section>
 
       {/* Trends */}
-     <section className="section-padding solar-section-alt">
-  <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-10 items-center">
+      <section className="section-padding solar-section-alt">
+    <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-8 lg:gap-10 items-center">
 
     {/* LEFT IMAGE */}
     <ScrollReveal>
@@ -83,7 +83,7 @@ export default function Market() {
         </p>
 
         {/* Progress Bars */}
-        <div className="space-y-6">
+        <div className="space-y-5 sm:space-y-6">
 
           {[
             { label: "Rising demand for clean energy across government and commercial sectors", value: 90 },
@@ -93,9 +93,9 @@ export default function Market() {
             <div key={i}>
               
               {/* Label + % */}
-              <div className="flex justify-between text-sm mb-2">
-                <span className="text-foreground">{item.label}</span>
-                <span className="text-muted-foreground">{item.value}%</span>
+              <div className="mb-2 space-y-1 sm:space-y-0 sm:flex sm:items-start sm:justify-between sm:gap-4 text-sm">
+                <span className="text-foreground leading-relaxed">{item.label}</span>
+                <span className="text-muted-foreground shrink-0">{item.value}%</span>
               </div>
 
               {/* Progress Bar */}
@@ -146,7 +146,7 @@ export default function Market() {
               Why <span className="gradient-text">Madhya Pradesh</span>?
             </h2>
           </ScrollReveal>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             <ScrollReveal>
               <div className="space-y-4">
                 {[

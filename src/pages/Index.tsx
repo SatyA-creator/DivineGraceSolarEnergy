@@ -30,33 +30,33 @@ export default function Index() {
   {/* Background */}
   <div className="absolute inset-0 bg-[radial-gradient(circle_at_12%_18%,#edf3f9_0%,#dce6ee_44%,#d6e0e9_100%)]" />
 
-  <div className="relative container mx-auto grid min-h-[680px] items-center gap-8 px-6 py-10 md:grid-cols-2">
+  <div className="relative container mx-auto grid min-h-[560px] md:min-h-[680px] items-center gap-8 px-4 sm:px-6 py-10 md:grid-cols-2">
     
     {/* LEFT CONTENT (UNCHANGED) */}
-    <div className="space-y-7 md:pr-8">
+    <div className="space-y-6 sm:space-y-7 md:pr-8">
       <span className="inline-flex rounded bg-green-600 px-5 py-1.5 text-xs font-bold tracking-wide text-white">
         DIVINEGRACE ENERGY
       </span>
 
-      <h1 className="font-heading text-5xl font-extrabold leading-[0.95] text-[#11427d] md:text-7xl">
+      <h1 className="font-heading text-4xl sm:text-5xl font-extrabold leading-[1] sm:leading-[0.95] text-[#11427d] md:text-7xl">
         Powering <span className="text-green-600">Solar Infrastructure</span>
         <br />
         for Government Projects
       </h1>
 
-      <p className="max-w-xl text-xl leading-relaxed text-slate-600">
+      <p className="max-w-xl text-base sm:text-lg md:text-xl leading-relaxed text-slate-600">
         Delivering large-scale solar energy solutions with reliable PPAs,
         high-efficiency systems, and long-term investment stability.
       </p>
 
-      <div className="flex flex-wrap gap-4 pt-2">
-        <Button className="h-12 rounded-none bg-green-600 px-8 text-base font-semibold text-white hover:bg-green-700">
+      <div className="flex flex-wrap gap-3 sm:gap-4 pt-2">
+        <Button className="h-11 sm:h-12 rounded-none bg-green-600 px-6 sm:px-8 text-sm sm:text-base font-semibold text-white hover:bg-green-700">
           View Projects
         </Button>
 
         <Button
           variant="outline"
-          className="h-12 rounded-none border-slate-300 bg-white/80 px-8 text-base font-semibold text-slate-700 hover:bg-white"
+          className="h-11 sm:h-12 rounded-none border-slate-300 bg-white/80 px-6 sm:px-8 text-sm sm:text-base font-semibold text-slate-700 hover:bg-white"
         >
           Investment Plan
         </Button>
@@ -67,13 +67,13 @@ export default function Index() {
     <div className="relative hidden h-full min-h-[620px] md:block">
 
       {/* IMAGE (BIGGER & CLEAN) */}
-      <div className="absolute  bottom-10 z-10 animate-fade-in">
-        <img
-          src="/hero.png"
-          alt="Solar energy landscape"
-          className="ml-auto w-[120%] max-w-none object-contain scale-110 "
-        />
-      </div>
+      <div className="absolute bottom-10 z-10 animate-fade-in">
+  <img
+    src="/hero2.png"
+    alt="Solar energy landscape"
+    className="ml-auto w-[115%] lg:w-[120%] max-w-none object-contain scale-105 lg:scale-110 -translate-x-6 lg:-translate-x-16"
+  />
+</div>
 
       {/* Floating clouds */}
       <div className="absolute left-[18%] top-[15%] h-8 w-20 rounded-full bg-white/55 animate-float" />
@@ -227,46 +227,70 @@ export default function Index() {
       </section>
 
       {/* Competitive Advantage */}
-      <section className="section-padding solar-section-alt">
-        <div className="container mx-auto max-w-6xl">
-          <ScrollReveal>
-            <h2 className="font-heading font-bold text-3xl md:text-4xl text-center mb-4">
-              Superior Efficiency & <span className="gradient-text">Performance</span>
-            </h2>
-          </ScrollReveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
-            {[
-              { stat: "~26%", label: "CUF via single axis trackers" },
-              { stat: "≤0.6%", label: "Annual degradation" },
-              { stat: "~9%", label: "Increase in uptime (AI & IoT)" },
-              { stat: "~97%", label: "Asset availability" },
-            ].map((item, i) => (
-              <ScrollReveal key={item.stat} delay={i * 100}>
-                <div className="glass-card p-6 text-center hover-scale">
-                  <div className="text-2xl md:text-3xl font-heading font-bold gradient-text">{item.stat}</div>
-                  <p className="text-muted-foreground text-xs mt-2">{item.label}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-          <ScrollReveal delay={300}>
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4 mt-8">
-              {[
-                "High-efficiency modules with ≤0.6% degradation",
-                "Sun-tracking boosts yield by ~25%",
-                "AI-driven diagnostics & IoT sensors",
-                "Battery-ready design",
-                "Hybrid deployment model",
-              ].map((text) => (
-                <div key={text} className="flex items-start gap-2 text-sm text-muted-foreground">
-                  <Sun className="h-4 w-4 text-accent shrink-0 mt-0.5" />
-                  <span>{text}</span>
-                </div>
-              ))}
+  <section className="py-16 sm:py-20 bg-[#f5f7f9]">
+  <div className="container mx-auto max-w-6xl px-6">
+    <div className="grid lg:grid-cols-2 gap-10 items-center">
+      
+      {/* LEFT CONTENT */}
+      <div>
+      
+
+        <h2 className="text-3xl md:text-4xl font-bold text-[#1b2e1b] mb-6">
+          Superior Efficiency & <span className="gradient-text">Performance</span>
+        </h2>
+
+        {/* ✅ MOVED FEATURES HERE */}
+        <div className="grid sm:grid-cols-2 gap-3 mb-6">
+          {[
+            "High-efficiency modules with ≤0.6% degradation",
+            "Sun-tracking boosts yield by ~25%",
+            "AI-driven diagnostics & IoT sensors",
+            "Battery-ready design",
+            "Hybrid deployment model",
+          ].map((text) => (
+            <div
+              key={text}
+              className="flex items-start gap-2 text-sm text-gray-500"
+            >
+              <Sun className="h-4 w-4 text-green-500 mt-1" />
+              <span>{text}</span>
             </div>
-          </ScrollReveal>
+          ))}
         </div>
-      </section>
+
+       
+
+      </div>
+
+      {/* RIGHT CARDS */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {[
+          { stat: "~26%", label: "CUF via single axis trackers" },
+          { stat: "≤0.6%", label: "Annual degradation" },
+          { stat: "~9%", label: "Increase in uptime (AI & IoT)" },
+          { stat: "~97%", label: "Asset availability" },
+        ].map((item) => (
+          <div
+            key={item.stat}
+            className="flex items-center gap-4 bg-[#e9ecef] p-4 sm:p-5 rounded-2xl shadow-sm hover:shadow-md transition"
+          >
+            <div className="bg-green-500 text-white p-4 rounded-xl flex items-center justify-center">
+              <Sun className="h-6 w-6" />
+            </div>
+
+            <div>
+              <h3 className="text-xl font-bold text-[#1b2e1b]">
+                {item.stat}
+              </h3>
+              <p className="text-sm text-gray-500">{item.label}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </div>
+</section>
 
       {/* Revenue Model */}
       <section className="section-padding solar-section">
@@ -327,7 +351,7 @@ export default function Index() {
               <ScrollReveal key={phase.phase} delay={i * 200}>
                 <div className={`relative pl-12 md:pl-0 mb-12 ${i % 2 === 0 ? "md:pr-[52%]" : "md:pl-[52%]"}`}>
                   <div className="absolute left-2 md:left-1/2 top-2 w-5 h-5 rounded-full bg-accent border-4 border-background -translate-x-1/2" />
-                  <div className="glass-card p-6">
+                  <div className="glass-card p-5 sm:p-6">
                     <div className="font-heading font-bold text-lg gradient-text">{phase.phase}</div>
                     <div className="text-sm text-muted-foreground mb-3">{phase.period}</div>
                     <ul className="space-y-2">
@@ -361,7 +385,7 @@ export default function Index() {
           <div className="relative">
             <div className="hidden lg:block absolute left-[10%] right-[10%] top-[96px] border-t border-dashed border-primary/25" />
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-6">
               {[
                 { state: "Madhya Pradesh", image: "/mp.jpg" },
                 { state: "Rajasthan", image: "/rajasthan.jpg" },
@@ -370,7 +394,7 @@ export default function Index() {
               ].map((item, i) => (
                 <ScrollReveal key={item.state} delay={i * 120}>
                   <div className="text-center group">
-                    <div className="relative mx-auto w-[190px] h-[190px] md:w-[210px] md:h-[210px] rounded-full p-1.5 border-2 border-dashed border-primary/25 bg-white/70 shadow-[0_12px_34px_rgba(12,48,89,0.10)] transition-transform duration-500 group-hover:scale-[1.03]">
+                    <div className="relative mx-auto w-[160px] h-[160px] sm:w-[190px] sm:h-[190px] md:w-[210px] md:h-[210px] rounded-full p-1.5 border-2 border-dashed border-primary/25 bg-white/70 shadow-[0_12px_34px_rgba(12,48,89,0.10)] transition-transform duration-500 group-hover:scale-[1.03]">
                       <img
                         src={item.image}
                         alt={item.state}
@@ -381,7 +405,7 @@ export default function Index() {
                       </div>
                     </div>
 
-                    <h3 className="font-heading font-semibold text-2xl text-foreground mt-7 mb-3">
+                    <h3 className="font-heading font-semibold text-xl sm:text-2xl text-foreground mt-6 sm:mt-7 mb-3">
                       {item.state}
                     </h3>
                     <p className="text-muted-foreground text-sm flex items-center justify-center gap-2">
@@ -397,12 +421,12 @@ export default function Index() {
       </section>
 
       {/* CTA */}
-      <section className="solar-section relative py-24 overflow-hidden">
+      <section className="solar-section relative py-16 sm:py-20 md:py-24 overflow-hidden">
         <div className="solar-spot left-[-120px] top-[-60px] h-72 w-72 bg-secondary/20" />
         <div className="solar-spot right-[-80px] bottom-[-60px] h-64 w-64 bg-primary/20" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <ScrollReveal className="mx-auto max-w-4xl rounded-[28px] border border-[#d5e3f1] bg-white/90 p-10 shadow-[0_24px_54px_rgba(14,51,94,0.14)]">
-            <h2 className="font-heading font-bold text-3xl md:text-5xl text-foreground mb-6">
+          <ScrollReveal className="mx-auto max-w-4xl rounded-[28px] border border-[#d5e3f1] bg-white/90 p-6 sm:p-8 md:p-10 shadow-[0_24px_54px_rgba(14,51,94,0.14)]">
+            <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-5xl text-foreground mb-6">
               Join the Future of Clean Energy Infrastructure
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">

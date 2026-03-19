@@ -1,6 +1,6 @@
 import ScrollReveal from "@/components/ScrollReveal";
 import ThemeMarquee from "@/components/ThemeMarquee";
-import { Eye, Target, ChevronLeft, ChevronRight } from "lucide-react";
+import { Eye, Target } from "lucide-react";
 
 export default function About() {
   return (
@@ -23,7 +23,7 @@ export default function About() {
 
       {/* NEW IMAGE STYLE SECTION */}
       <section className="section-padding bg-muted/30">
-        <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-10 items-center">
+        <div className="container mx-auto max-w-6xl grid md:grid-cols-2 gap-8 lg:gap-10 items-center">
 
           {/* LEFT IMAGE */}
           <ScrollReveal>
@@ -83,8 +83,8 @@ export default function About() {
               </p>
 
               {/* Stats */}
-              <div className="flex gap-10 mb-8">
-                <div className="flex items-center gap-3">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-6 mb-8">
+                <div className="flex items-center gap-3 min-w-0">
                   <div className="bg-primary text-primary-foreground p-3 rounded-xl">
                     <Eye className="h-5 w-5" />
                   </div>
@@ -94,7 +94,7 @@ export default function About() {
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 min-w-0">
                   <div className="bg-primary text-primary-foreground p-3 rounded-xl">
                     <Target className="h-5 w-5" />
                   </div>
@@ -118,7 +118,7 @@ export default function About() {
           <div className="grid md:grid-cols-2 gap-8">
 
             <ScrollReveal>
-              <div className="p-8 rounded-2xl bg-muted/50 hover:shadow-lg transition">
+              <div className="p-6 sm:p-8 rounded-2xl bg-muted/50 hover:shadow-lg transition">
                 <Eye className="h-10 w-10 text-primary mb-4" />
                 <h2 className="font-heading font-bold text-2xl mb-4">Our Vision</h2>
                 <p className="text-muted-foreground leading-relaxed">
@@ -128,7 +128,7 @@ export default function About() {
             </ScrollReveal>
 
             <ScrollReveal delay={200}>
-              <div className="p-8 rounded-2xl bg-muted/50 hover:shadow-lg transition">
+              <div className="p-6 sm:p-8 rounded-2xl bg-muted/50 hover:shadow-lg transition">
                 <Target className="h-10 w-10 text-secondary mb-4" />
                 <h2 className="font-heading font-bold text-2xl mb-4">Our Mission</h2>
                 <p className="text-muted-foreground leading-relaxed">

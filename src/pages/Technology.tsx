@@ -39,10 +39,10 @@ export default function Technology() {
               Core <span className="gradient-text">Features</span>
             </h2>
           </ScrollReveal>
-          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 sm:gap-6">
             {features.map((f, i) => (
               <ScrollReveal key={f.title} delay={i * 100}>
-                <div className="glass-card p-6 text-center h-full hover-scale">
+                <div className="glass-card p-5 sm:p-6 text-center h-full hover-scale">
                   <f.icon className="h-10 w-10 text-primary mx-auto mb-4" />
                   <h3 className="font-heading font-semibold text-sm mb-2">{f.title}</h3>
                   <p className="text-muted-foreground text-xs">{f.desc}</p>
@@ -60,10 +60,10 @@ export default function Technology() {
               Competitive <span className="gradient-text">Edge</span>
             </h2>
           </ScrollReveal>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-5 sm:gap-6">
             {edges.map((e, i) => (
               <ScrollReveal key={e.title} delay={i * 150}>
-                <div className="glass-card p-8 h-full hover-scale">
+                <div className="glass-card p-6 sm:p-8 h-full hover-scale">
                   <e.icon className="h-10 w-10 text-accent mb-4" />
                   <h3 className="font-heading font-semibold text-lg mb-2">{e.title}</h3>
                   <p className="text-muted-foreground text-sm">{e.desc}</p>
@@ -72,7 +72,7 @@ export default function Technology() {
             ))}
           </div>
           <ScrollReveal delay={400}>
-            <div className="mt-12 glass-card p-8 text-center">
+            <div className="mt-10 sm:mt-12 glass-card p-6 sm:p-8 text-center">
               <p className="text-xl font-heading font-semibold gradient-text">
                 Up to 25% more energy generation than conventional setups
               </p>

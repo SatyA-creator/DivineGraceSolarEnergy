@@ -1,18 +1,16 @@
 import ScrollReveal from "@/components/ScrollReveal";
 import ThemeMarquee from "@/components/ThemeMarquee";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
-import { useAnimatedCounter } from "@/hooks/useAnimatedCounter";
 import { MapPin, Calendar, Clock, Zap } from "lucide-react";
 
 function StatCard({ value, suffix = "", label, icon: Icon }) {
   return (
-    <div className="relative bg-background border border-border rounded-xl p-6 flex flex-col justify-between h-full group hover:shadow-md transition">
+    <div className="relative bg-background border border-border rounded-xl p-4 sm:p-6 flex flex-col justify-between h-full group hover:shadow-md transition">
 
       {/* Top Row */}
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-between mb-5 sm:mb-6">
         
         {/* Value */}
-        <h3 className="text-4xl font-bold text-foreground">
+        <h3 className="text-3xl sm:text-4xl font-bold text-foreground">
           {value}
           <span className="text-primary">{suffix}</span>
         </h3>
@@ -57,7 +55,7 @@ export default function Projects() {
 
       <section className="section-padding solar-section">
   <div className="container mx-auto max-w-6xl">
-    <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
 
       <StatCard value="300" suffix="+" label="Acres (Parcel 1)" icon={MapPin} />
       <StatCard value="500" label="Acres (Parcel 2)" icon={MapPin} />
@@ -77,7 +75,7 @@ export default function Projects() {
               Delivery <span className="gradient-text">Timeline</span>
             </h2>
           </ScrollReveal>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-5 sm:gap-6">
             <ScrollReveal>
               <div className="glass-card p-8 text-center hover-scale">
                 <Calendar className="h-10 w-10 text-primary mx-auto mb-4" />
@@ -103,7 +101,7 @@ export default function Projects() {
             <h2 className="font-heading font-bold text-3xl md:text-4xl mb-8">
               Project <span className="gradient-text">Locations</span>
             </h2>
-            <div className="glass-card p-8 inline-block">
+            <div className="glass-card p-4 sm:p-6 md:p-8 inline-block w-full">
               <svg viewBox="0 0 400 450" className="w-full max-w-md mx-auto" aria-label="Map of Madhya Pradesh project locations">
                 {/* Simplified MP outline */}
                 <path
